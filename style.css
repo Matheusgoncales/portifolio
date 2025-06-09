@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+header{
+  height: 50px;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+}
+
+.container-infos{
+  display: flex;
+  margin-left: auto;
+}
+
+.img-header{
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 40px;
+  margin: 5px 0 5px 20px;
+}
+
+.link-home, .link-about-me, .link-projects, .link-contact{
+  border: 1px solid black;
+  width: auto;
+  display: flex;
+  margin: 10px 20px 10px 0px;
+}
+
+.text-link{
+  display: flex;
+  text-align: center;
+}
