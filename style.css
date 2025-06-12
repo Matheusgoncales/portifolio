@@ -3,6 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container-main{
+  height: 100%;
+  background-color: blue;
 }
 
 header{
@@ -10,28 +17,93 @@ header{
   width: 100%;
   border: 1px solid black;
   display: flex;
+  align-items: center;
 }
 
 .container-infos{
   display: flex;
   margin-left: auto;
+  justify-content: end;
+  align-items: center;
 }
 
 .img-header{
   border: 1px solid black;
   border-radius: 50%;
   width: 40px;
-  margin: 5px 0 5px 20px;
+  height: 40px;
+  margin: 0 0 0 20px;
+  
 }
 
 .link-home, .link-about-me, .link-projects, .link-contact{
   border: 1px solid black;
   width: auto;
-  display: flex;
-  margin: 10px 20px 10px 0px;
+  height: 50%;
+  margin: 0 20px 0 0;
+  align-items: center;
 }
 
 .text-link{
   display: flex;
   text-align: center;
 }
+
+.home-page{
+  background-color: blueviolet;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.img-home-page{
+  display: flex;
+  width: 50%;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-perfil{
+  display: flex;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+}
+
+.redes{
+  display: flex;
+  border: 1px solid black;
+  width: 175px;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.insta, .linkedin, .github{
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 50px;
+}
+
+.info-home-page{
+  display: flex;
+  width: 50%;
+  border: 1px solid red;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-inicio{
+  display: flex;
+  border: 1px solid red;
+  width: 70%;
+  height: 40%;
+}
+
+.about-me{
+  height: 100%;
+  background-color: grey;
+}
+
