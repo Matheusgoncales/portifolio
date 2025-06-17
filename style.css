@@ -7,19 +7,23 @@
   width: 100%;
 }
 
+body{
+    background-color: cadetblue;
+}
+
 .container-main{
-  height: 100%;
-  background-color: blue;
+  
 }
 
 header{
+  background-color: white;
   height: 50px;
   width: 100%;
   border: 1px solid black;
   display: flex;
   align-items: center;
 }
-
+/*Home*/
 .container-infos{
   display: flex;
   margin-left: auto;
@@ -49,8 +53,7 @@ header{
   text-align: center;
 }
 
-.home-page{
-  background-color: blueviolet;
+.home-page, .about-me{
   height: 100%;
   width: 100%;
   display: flex;
@@ -68,8 +71,8 @@ header{
 .img-perfil{
   display: flex;
   border-radius: 50%;
-  width: 50%;
-  height: 50%;
+  width: 400px;
+  height: 400px;
   border: 1px solid black;
 }
 
@@ -101,9 +104,51 @@ header{
   width: 70%;
   height: 40%;
 }
+/*end-Home*/
 
+/*about-me*/
 .about-me{
   height: 100%;
-  background-color: grey;
 }
 
+/*end-about-me*/
+
+/*projects*/
+.my-projects{
+  padding: 20px;
+}
+
+.title-projects {
+  display: flex;
+  height: 60px;
+}
+
+.tittle-p{
+  align-items: center;
+  justify-content: center;
+  display: flex;    
+  font-size: 50px;
+}
+
+.content-projects{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.content1,.content2,.content3{
+  display: flex;
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+}
+/*end-projects•*/
+
+@media(max-width: 801px){
+  .home-page{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+}
