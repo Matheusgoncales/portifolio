@@ -8,12 +8,11 @@
 }
 
 body{
-    background-color: cadetblue;
+background: #020024;
+background: linear-gradient(45deg,rgba(2, 0, 36, 1) 0%, rgba(27, 27, 99, 1) 55%, rgba(57, 28, 82, 1) 100%);
+  background-attachment: fixed;
 }
 
-.container-main{
-  
-}
 
 header{
   background-color: white;
@@ -22,6 +21,8 @@ header{
   border: 1px solid black;
   display: flex;
   align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 /*Home*/
 .container-infos{
@@ -42,6 +43,7 @@ header{
 
 .link-home, .link-about-me, .link-projects, .link-contact{
   border: 1px solid black;
+  border-radius: 10%;
   width: auto;
   height: 50%;
   margin: 0 20px 0 0;
@@ -51,9 +53,10 @@ header{
 .text-link{
   display: flex;
   text-align: center;
+  color: white;
 }
 
-.home-page, .about-me{
+.home-page, .about-me, .contact{
   height: 100%;
   width: 100%;
   display: flex;
