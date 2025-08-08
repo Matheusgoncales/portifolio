@@ -28,51 +28,107 @@
         </div>
     </header>
     <div class="container-main">
-        <div id="homepage" class="home-page">
-            <div class="img-home-page">
-
+        <section id="homepage" class="home-page">
+            <div class="profile-section">
                 <div class="img-perfil"></div>
-                <div class="redes">
-                    <div class="insta" target="_blank">
-
-                    </div>
-                    <div class="linkedin"><a href="https://www.linkedin.com/in/matheusgoncales/" target="_blank"><img class="imglinkedin" src="assets/linkedin.png" alt=""></a></div>
-                    <div class="github"><a href="https://github.com/Matheusgoncales/" target="_blank"><img class="imggit" src="assets/github.png" alt=""></a></div>
+                <div class="social-links">
+                    <a href="https://github.com/Matheusgoncales/" target="_blank" class="social-link">
+                        <img src="assets/github.png" alt="GitHub" class="social-icon">
+                    </a>
+                    <a href="#" target="_blank" class="social-link">
+                        <img src="assets/instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/matheusgoncales/" target="_blank" class="social-link">
+                        <img src="assets/linkedin.png" alt="LinkedIn" class="social-icon">
+                    </a>
                 </div>
-
             </div>
 
-            <div class="info-home-page">
-                <div class="info-inicio"></div>
+            <div class="welcome-section">
+                <h1>Olá, eu sou Matheus Gonçales</h1>
+                <p class="welcome-text">Bem-vindo(a) ao meu portfólio! Aqui você encontrará informações sobre mim, meus projetos e como entrar em contato. Fique à vontade para explorar e conhecer mais sobre o meu trabalho como desenvolvedor.</p>
             </div>
-        </div>
+        </section>
 
-
-        <div id="aboutme" class="about-me">
-            <div class="info-home-page">
-                <div class="info-inicio"></div>
+        <section id="aboutme" class="about-me">
+            <div class="about-content">
+                <h1>Sobre Mim</h1>
+                <p class="about-text">Olá! Eu sou Matheus Gonçales, um desenvolvedor apaixonado por tecnologia e inovação. Com experiência em desenvolvimento web, busco sempre aprender novas tecnologias e me aprimorar constantemente.</p>
+                <div class="experience">
+                    <h3>Experiência Profissional</h3>
+                    <ul class="experience-list">
+                        <li>Desenvolvedor Full Stack - ZionLogtec (2024 - Atual)</li>
+                        <li>Estagiário em Desenvolvimento - BandUp (Julho 2023 - Dezembro 2023)</li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <h3>Habilidades Técnicas</h3>
+                    <ul class="skills-list">
+                        <li>HTML5, CSS3, JavaScript</li>
+                        <li>React, Node.js</li>
+                        <li>Banco de Dados SQL e NoSQL</li>
+                        <li>Git e Controle de Versão</li>
+                        <li>Java</li>
+                        <li>Delphi</li>
+                    </ul>
+                </div>
             </div>    
-            <div class="img-home-page">
-                <div class="img-perfil"></div>
+            <div class="about-image">
+                <div class="img-perfil-about"></div>
             </div> 
-        </div>
+        </section>
 
-
-        <div id="myprojects" class="my-projects">
+        <section id="myprojects" class="my-projects">
             <div class="title-projects">
-                <p class="tittle-p">Meus Projetos</p>
+                <h1 class="tittle-h1">Meus Projetos</h1>
             </div>
             <div class="content-projects">
-                <div class="content1"></div>
-                <div class="content2"></div>
-                <div class="content3"></div>
+                <div class="project" data-project="1">
+                    <div class="content1"></div>
+                    <div class="project-overlay">Ver Projeto</div>
+                </div>
+                <div class="project" data-project="2">
+                    <div class="content2"></div>
+                    <div class="project-overlay">Ver Projeto</div>
+                </div>
+                <div class="project" data-project="3">
+                    <div class="content3"></div>
+                    <div class="project-overlay">Ver Projeto</div>
+                </div>
+            </div>
+
+            <!-- Modal do Carrossel -->
+            <div id="carouselModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="" alt="Projeto" class="carousel-image">
+                        </div>
+                        <button class="carousel-button prev">❮</button>
+                        <button class="carousel-button next">❯</button>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="contateme" class="contact">
-            <div class="contate-me"></div>
-            <div class="email"></div>
-        </div>
+            <div class="contact-container">
+                <h2>Entre em Contato</h2>
+                <p class="contact-text">Estou sempre aberto a novas oportunidades e parcerias. Sinta-se à vontade para entrar em contato comigo através dos canais abaixo:</p>
+                
+                <div class="contact-options">
+                    <a href="https://www.linkedin.com/in/matheusgoncales/" target="_blank" class="contact-button linkedin-btn">
+                        <img src="assets/linkedin.png" alt="LinkedIn" class="contact-icon">
+                        LinkedIn
+                    </a>
+                    <a href="mailto:seuemail@exemplo.com" class="contact-button email-btn">
+                        Enviar Email
+                    </a>
+                </div>
+            </div>
+        </section>
     </div>
+    <script src="carousel.js"></script>
 </body>
 </html>
