@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentProject = null;
     let currentImageIndex = 0;
 
-    // Abrir modal quando um projeto for clicado
     projects.forEach(project => {
         project.addEventListener('click', function() {
             const projectId = this.getAttribute('data-project');
@@ -43,18 +42,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentImageIndex = 0;
                 updateCarousel();
                 modal.style.display = 'block';
-                document.body.style.overflow = 'hidden'; // Impedir rolagem da página
+                document.body.style.overflow = 'hidden'; 
             }
         });
     });
 
-    // Fechar modal
     closeBtn.addEventListener('click', function() {
         modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Restaurar rolagem da página
+        document.body.style.overflow = 'auto';
     });
 
-    // Fechar modal ao clicar fora da imagem
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
             modal.style.display = 'none';
@@ -62,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Navegação do carrossel
+
     prevBtn.addEventListener('click', function(e) {
         e.stopPropagation();
         if (currentProject !== null) {
@@ -79,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Atualizar a imagem exibida no carrossel
     function updateCarousel() {
         if (currentProject !== null) {
             const images = projectsData[currentProject].images;
@@ -90,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Navegação por teclado
     document.addEventListener('keydown', function(e) {
         if (modal.style.display === 'block') {
             if (e.key === 'ArrowLeft') {
@@ -104,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Dados dos projetos (pode ser movido para um arquivo JSON separado)
+
 const projectsData = {
     1: {
         images: [
