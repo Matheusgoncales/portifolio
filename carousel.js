@@ -1,27 +1,7 @@
-// Dados dos projetos (substitua as URLs pelas imagens reais dos seus projetos)
-const projects = {
-    1: {
-        images: [
-            'https://via.placeholder.com/800x600/3498db/ffffff?text=Projeto+1+Imagem+1',
-            'https://via.placeholder.com/800x600/2ecc71/ffffff?text=Projeto+1+Imagem+2',
-            'https://via.placeholder.com/800x600/e74c3c/ffffff?text=Projeto+1+Imagem+3'
-        ]
-    },
-    2: {
-        images: [
-            'https://via.placeholder.com/800x600/9b59b6/ffffff?text=Projeto+2+Imagem+1',
-            'https://via.placeholder.com/800x600/1abc9c/ffffff?text=Projeto+2+Imagem+2'
-        ]
-    },
-    3: {
-        images: [
-            'https://via.placeholder.com/800x600/f1c40f/000000?text=Projeto+3+Imagem+1',
-            'https://via.placeholder.com/800x600/e67e22/ffffff?text=Projeto+3+Imagem+2',
-            'https://via.placeholder.com/800x600/34495e/ffffff?text=Projeto+3+Imagem+3',
-            'https://via.placeholder.com/800x600/7f8c8d/ffffff?text=Projeto+3+Imagem+4'
-        ]
-    }
-};
+// Verifica se a largura da tela é maior que 768px (dispositivos não-mobile)
+function isDesktopView() {
+    return window.innerWidth > 768;
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('carouselModal');
@@ -29,13 +9,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeBtn = document.querySelector('.close');
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
-    const projects = document.querySelectorAll('.project');
+    const projects = document.querySelectorAll('.content1');
     
     let currentProject = null;
     let currentImageIndex = 0;
 
     projects.forEach(project => {
         project.addEventListener('click', function() {
+            // Verifica se a visualização é desktop antes de abrir o carrossel
+            if (!isDesktopView()) {
+                
+                return; // Não faz nada se for mobile
+            }
+            
             const projectId = this.getAttribute('data-project');
             if (projectsData[projectId]) {
                 currentProject = projectId;
@@ -103,23 +89,22 @@ document.addEventListener('DOMContentLoaded', function() {
 const projectsData = {
     1: {
         images: [
-            'https://via.placeholder.com/800x600/3498db/ffffff?text=Projeto+1+Imagem+1',
-            'https://via.placeholder.com/800x600/2ecc71/ffffff?text=Projeto+1+Imagem+2',
-            'https://via.placeholder.com/800x600/e74c3c/ffffff?text=Projeto+1+Imagem+3'
+            'assets/CalculatorAge/calculadoraidade.png'
         ]
     },
     2: {
         images: [
-            'https://via.placeholder.com/800x600/9b59b6/ffffff?text=Projeto+2+Imagem+1',
-            'https://via.placeholder.com/800x600/1abc9c/ffffff?text=Projeto+2+Imagem+2'
+            'assets/LadingFull/ladingfull1.png',
+            'assets/LadingFull/ladingfull2.png',
+            'assets/LadingFull/ladingfull3.png',
+            'assets/LadingFull/ladingfull4.png',
+            'assets/LadingFull/ladingfull5.png',
+            'assets/LadingFull/ladingfull6.png'
         ]
     },
     3: {
         images: [
-            'https://via.placeholder.com/800x600/f1c40f/000000?text=Projeto+3+Imagem+1',
-            'https://via.placeholder.com/800x600/e67e22/ffffff?text=Projeto+3+Imagem+2',
-            'https://via.placeholder.com/800x600/34495e/ffffff?text=Projeto+3+Imagem+3',
-            'https://via.placeholder.com/800x600/7f8c8d/ffffff?text=Projeto+3+Imagem+4'
+            'assets/newsletter/newsletter.png'
         ]
     }
 };
