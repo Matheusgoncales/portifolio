@@ -571,6 +571,7 @@ p {
   .about-text {
     font-size: 1rem;
     text-align: left;
+    text-align: center;
   }
   
   /* Projects */
@@ -649,7 +650,7 @@ p {
 
 body {
   background: #020024;
-  background: linear-gradient(45deg,rgba(2, 0, 36, 1) 0%, rgba(27, 27, 99, 1) 55%, rgba(57, 28, 82, 1) 100%);
+  background: linear-gradient(45deg,rgb(0, 0, 0) 0%, rgb(8, 8, 61) 55%, rgb(18, 2, 122) 100%);
   background-attachment: fixed;
   margin: 0;
   padding: 0;
