@@ -17,17 +17,11 @@ function scrollToNextSection() {
 
   if (currentSectionIndex < sections.length - 1) {
     currentSectionIndex++;
-  } else {
-    isScrolling = false; 
-    return;
+    sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+    updateURL();
   }
 
-  sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
-  updateURL();
-
-  setTimeout(() => {
-    isScrolling = false;
-  }, 500); 
+  setTimeout(() => { isScrolling = false; }, 500);
 }
 
 // Função para rolar para a seção anterior
@@ -37,20 +31,14 @@ function scrollToPrevSection() {
 
   if (currentSectionIndex > 0) {
     currentSectionIndex--;
-  } else {
-    isScrolling = false; 
-    return;
+    sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+    updateURL();
   }
 
-  sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
-  updateURL();
-
-  setTimeout(() => {
-    isScrolling = false;
-  }, 500);
+  setTimeout(() => { isScrolling = false; }, 500);
 }
 
-// Evento de scroll
+// Evento de scroll com mouse
 document.addEventListener('wheel', (event) => {
   event.preventDefault();
   if (event.deltaY > 0) {
@@ -71,8 +59,18 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-// Inicialização
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      currentSectionIndex = Array.from(sections).indexOf(entry.target);
+      updateURL();
+    }
+  });
+}, { threshold: 0.6 });
+
+sections.forEach(section => observer.observe(section));
+
 window.onload = () => {
   sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
   updateURL();
-}
+};
